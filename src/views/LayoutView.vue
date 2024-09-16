@@ -13,6 +13,24 @@
               <span class="link_name">Tableau de bord</span>
             </router-link>
           </li>
+          
+          <li class="item">
+            <div class="iocn-link">
+              <a href="#">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="link_name">Commandes</span>
+              </a>
+              <i class="fa-solid fa-angle-down arrow"></i>
+            </div>
+            <ul class="sub-menu">
+              <li>
+                <a class="link_name title-hover titre border-bottom border-white mb-2" href="#">Commandes</a>
+              </li>
+              <li>
+                <router-link to="/home/orders" class="nav-link">Liste des commandes</router-link>
+              </li>
+            </ul>
+          </li>
           <li class="item">
             <div class="iocn-link">
               <a href="#">
@@ -33,17 +51,17 @@
           <li class="item">
             <div class="iocn-link">
               <a href="#">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span class="link_name">Commandes</span>
+                <i class="fa-solid fa-cubes"></i>
+                <span class="link_name">Catégorie</span>
               </a>
               <i class="fa-solid fa-angle-down arrow"></i>
             </div>
             <ul class="sub-menu">
               <li>
-                <a class="link_name title-hover titre border-bottom border-white mb-2" href="#">Commandes</a>
+                <a class="link_name title-hover titre border-bottom border-white mb-2" href="#">Catégorie</a>
               </li>
               <li>
-                <router-link to="/home/orders" class="nav-link">Liste des commandes</router-link>
+                <router-link to="/home/categories" class="nav-link">Liste des catégories</router-link>
               </li>
             </ul>
           </li>
@@ -99,7 +117,7 @@
                   </div>
                   <div class="d-flex" style="gap: 8px;">
                     <i class="bi bi-person-circle fs-5"></i>
-                    <label class="fs-5">Burturo</label>
+                    <router-link to="/home/profil"><label class="text-black fs-5">Burturo</label></router-link>
                     <i class="bi bi-chevron-down"></i>
                   </div>
                   <i class="bi bi-gear fs-5" type="button"></i>
@@ -109,15 +127,25 @@
           </div>
         </nav>
         <div class="scroolAsignSubj h-100 px-4 pt-5 haut-rendbody">
-          <router-view />
+          <div class="d-flex flex-column">
+            <Arianfield></ArianField>
+            <router-view />
+          </div>
+          
         </div>
       </div>
     </div>
   </template>
   
   <script>
+import Arianfield from '@/components/arianfield.vue';
+
+
   export default {
   name: "LayoutView",
+  components: {
+    Arianfield
+  },
   data() {
     return {
       pageTitle: 'Titre par défaut', // Titre par défaut si aucune route ne correspond

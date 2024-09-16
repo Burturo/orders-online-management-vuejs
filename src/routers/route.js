@@ -7,6 +7,8 @@ import UserProfilView from '@/views/UserProfilView.vue';
 import LoginView from '@/views/LoginView.vue';
 import RegistrationView from '@/views/RegistrationView.vue';
 import DashboardView from '@/views/DashboardView.vue';
+import PlaceAnOrderView from '@/views/PlaceAnOrderView.vue';
+import CategorieView from '@/views/CategorieView.vue';
 
 const routes = [
   {
@@ -38,13 +40,33 @@ const routes = [
         path:'/home/orders',
         name: 'Orders',
         component: OrdersView,
-        meta: { title: 'Commandes' }
+        meta: { title: 'Commandes' },
+        children:[
+          {
+            path:'/home/orders/place_an_order',
+            name: 'create_order',
+            component: PlaceAnOrderView,
+            meta: { title: 'Passer une commande' }
+          },
+          {
+            path:'/home/orders/place_an_order',
+            name: 'edit_order',
+            component: PlaceAnOrderView,
+            meta: { title: 'Modification la commande' }
+          }
+        ]
       }
       ,{
         path:'/home/users',
         name: 'Users',
         component: UsersView,
         meta: { title: 'Utilisateurs' }
+      }
+      ,{
+        path:'/home/categories',
+        name: 'Categories',
+        component: CategorieView,
+        meta: { title: 'Categories' }
       }
       ,{
         path:'/home/profil',

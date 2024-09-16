@@ -1,6 +1,6 @@
 <template>
     <div>
-      <div class="d-flex flex-column py-2 px-4 my-md-4 my-3" style="height: 90vh;">
+      <div class="d-flex flex-column px-4" style="height: 80vh;">
         <div class="d-flex flex-md-row flex-column justify-content-between mb-md-4 mb-0">
           <div class="col-md-4 col-12 mb-3 mb-md-0 card border-1 border-black shadow p-3 rounded">
             <div class="card-body">
@@ -23,7 +23,7 @@
             </div>
           </div>
         </div>
-        <div class="d-flex flex-md-row flex-column justify-content-between h-100 mb-4">
+        <div class="d-flex flex-md-row flex-column justify-content-between h-100">
           <div class="col-md-7 col-12 card border-1 border-black shadow p-3 rounded">
             <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
           </div>
