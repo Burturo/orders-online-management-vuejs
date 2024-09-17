@@ -122,17 +122,40 @@ table{
       min-width: 280px;
       color: #0F366F;
     }
+    .form-select{
+      border: 1px #0F366F solid;
+      border-radius: 14px;
+      min-width: 280px;
+      color: #0F366F;
+    }
 
-.btn-outline{
-  height: 35px;
+.btn-outline-primary{
   border-radius: 14px;
-  border: 1px solid #f77801;
+  border: 1px solid #0F366F;
   background-color: white;
-  color: #f77801;
+  color: #0F366F;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-.btn-outline:hover{
+.btn-outline-primary:hover{
   background-color: #eeebeb !important;
+  color: #0F366F;
+  border: 1px solid #0F366F;
+}
+.btn-outline-primary1{
+  border-radius: 14px;
+  border: 1px solid #0F366F;
+  background-color: white;
+  color: #0F366F;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.btn-outline-primary1:hover{
+  background-color: #0F366F !important;
+  color: #fff;
+  border: 1px solid #0F366F;
 }
 .btn-primary{
   border-radius: 14px;

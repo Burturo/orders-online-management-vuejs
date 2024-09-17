@@ -6,7 +6,7 @@
           <input type="text" class="form-control" id="search" placeholder="Recherche">
         </div>
         <div class="d-flex">
-          <button type="button" class="btn btn-primary"><i class="fa-solid fa-plus me-2"></i>Ajouter</button>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa-solid fa-plus me-2"></i>Ajouter</button>
           
         </div>
       </div>
@@ -16,9 +16,9 @@
             <tr>
               <th scope="col"><input type="checkbox" class="form-check-input"/>
                 N°<i class="bi bi-arrow-down-up ms-2 fs-6"></i></th>
-              <th scope="col">First<i class="bi bi-arrow-down-up ms-2 fs-6"></i></th>
-              <th scope="col">Last<i class="bi bi-arrow-down-up ms-2 fs-6"></i></th>
-              <th scope="col">Handle<i class="bi bi-arrow-down-up ms-2 fs-6"></i></th>
+              <th scope="col">Nom & Prénom<i class="bi bi-arrow-down-up ms-2 fs-6"></i></th>
+              <th scope="col">E-mail<i class="bi bi-arrow-down-up ms-2 fs-6"></i></th>
+              <th scope="col">Rôle<i class="bi bi-arrow-down-up ms-2 fs-6"></i></th>
               <th scope="col" class="text-end pe-5">Action</th>
             </tr>
           </thead>
@@ -89,35 +89,41 @@
   </div>
 
 
-
-
-  <!-- <v-dialog max-width="500">
-  <template v-slot:activator="{ props: activatorProps }">
-    <v-btn
-      v-bind="activatorProps"
-      color="surface-variant"
-      text="Open Dialog"
-      variant="flat"
-    ></v-btn>
-  </template>
-
-  <template v-slot:default="{ isActive }">
-    <v-card title="Dialog">
-      <v-card-text>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </v-card-text>
-
-      <v-card-actions>
-        <v-spacer></v-spacer>
-
-        <v-btn
-          text="Close Dialog"
-          @click="isActive.value = false"
-        ></v-btn>
-      </v-card-actions>
-    </v-card>
-  </template>
-</v-dialog> -->
+  <!-- Create Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Création d'un utilisateur</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+                <label for="name" class="form-label">Nom & Prénom :</label>
+                <input type="text" class="form-control" id="name" placeholder="Entrez le nom et prénom">
+              </div>
+              <div class="mb-3">
+                <label for="name" class="form-label">E-mail :</label>
+                <input type="email" class="form-control" id="name" placeholder="Entrez l'e-mail">
+              </div>
+              <div class="mb-3">
+                <label for="role" class="form-label">Rôle :</label>
+                <select id="role" class="form-select" required>
+                  <option selected>Sélectionnez un rôle...</option>
+                  <option value="Client">Client</option>
+                  <option value="Admin">Admin</option>
+                </select>
+              </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Annuler</button>
+          <button type="button" class="btn btn-primary">Enregister</button>
+        </div>
+      </div>
+    </div>
+  </div>
   </template>
 
 

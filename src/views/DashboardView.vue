@@ -6,6 +6,7 @@
             <div class="card-body">
               <h5 class="card-title">Nombre de produits</h5>
               <div class="text-end fs-5">
+                200
               </div>
             </div>
           </div>
@@ -13,13 +14,16 @@
             <div class="card-body">
               <h5 class="card-title">Nombre de commandes</h5>
               <div class="text-end fs-5">
+                20
               </div>
             </div>
           </div>
           <div class="col-md-3 col-12 mb-3 mb-md-0 card border-1 border-black shadow p-3 rounded">
             <div class="card-body">
               <h5 class="card-title">Nombre d'utilisateur</h5>
-              <p class="card-text fs-5"></p>
+              <div class="text-end fs-5">
+                16
+              </div>
             </div>
           </div>
         </div>
