@@ -122,6 +122,13 @@ table{
       min-width: 280px;
       color: #0F366F;
     }
+    .form-control-num{
+      border: 1px #0F366F solid;
+      border-radius: 14px;
+      color: #0F366F;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
     .form-select{
       border: 1px #0F366F solid;
       border-radius: 14px;

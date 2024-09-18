@@ -41,18 +41,24 @@ const routes = [
         name: 'Orders',
         component: OrdersView,
         meta: { title: 'Commandes' },
-        children:[
-          {
-            path:'/home/orders/create',
-            name: 'create_order',
-            component: PlaceAnOrderView,
-            meta: { title: 'Passer une commande' }
-          }
-        ]
+        // children:[
+        //   {
+        //     path:'/home/orders/add_order',
+        //     name: 'create_order',
+        //     component: PlaceAnOrderView,
+        //     meta: { title: 'Passer une commande' }
+        //   }
+        // ]
       }
       ,{
         path:'/home/add_order',
         name: 'Create_order_direct',
+        component: PlaceAnOrderView,
+        meta: { title: 'Commandes' },
+      }
+      ,{
+        path:'/home/orders/add_order',
+        name: 'create_order',
         component: PlaceAnOrderView,
         meta: { title: 'Commandes' },
       }
