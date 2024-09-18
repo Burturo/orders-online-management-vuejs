@@ -29,6 +29,9 @@
               <li>
                 <router-link to="/home/orders" class="nav-link">Liste des commandes</router-link>
               </li>
+              <li>
+                <router-link to="/home/add_order" class="nav-link">Passer une commande</router-link>
+              </li>
             </ul>
           </li>
           <li class="item">

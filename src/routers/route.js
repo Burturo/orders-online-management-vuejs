@@ -43,18 +43,18 @@ const routes = [
         meta: { title: 'Commandes' },
         children:[
           {
-            path:'/home/orders/place_an_order',
+            path:'/home/orders/create',
             name: 'create_order',
             component: PlaceAnOrderView,
             meta: { title: 'Passer une commande' }
-          },
-          {
-            path:'/home/orders/place_an_order',
-            name: 'edit_order',
-            component: PlaceAnOrderView,
-            meta: { title: 'Modification la commande' }
           }
         ]
+      }
+      ,{
+        path:'/home/add_order',
+        name: 'Create_order_direct',
+        component: PlaceAnOrderView,
+        meta: { title: 'Commandes' },
       }
       ,{
         path:'/home/users',

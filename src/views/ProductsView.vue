@@ -20,6 +20,7 @@
               <th scope="col">Description<i class="bi bi-arrow-down-up ms-2 fs-6"></i></th>
               <th scope="col">Prix<i class="bi bi-arrow-down-up ms-2 fs-6"></i></th>
               <th scope="col">Quantité<i class="bi bi-arrow-down-up ms-2 fs-6"></i></th>
+              <th scope="col">Catégorie<i class="bi bi-arrow-down-up ms-2 fs-6"></i></th>
               <th scope="col" class="text-end pe-5">Action</th>
             </tr>
           </thead>
@@ -31,6 +32,7 @@
               </td>
               <td>Mark</td>
               <td>Otto</td>
+              <td>@mdo</td>
               <td>@mdo</td>
               <td>@mdo</td>
               <td  style="gap: 10px;text-align: right;">
@@ -54,6 +56,7 @@
               <td>Thornton</td>
               <td>@fat</td>
               <td>@fat</td>
+              <td>@fat</td>
               <td  style="gap: 10px;text-align: right;">
                 <button class="action-btn detail" title="Details">
                   <i class="fa-regular fa-eye"></i>
@@ -72,6 +75,7 @@
                 3
               </td>
               <td colspan="2">Larry the Bird</td>
+              <td>@twitter</td>
               <td>@twitter</td>
               <td>@twitter</td>
               <td  style="gap: 10px;text-align: right;">
@@ -101,7 +105,7 @@
           <h5 class="modal-title" id="staticBackdropLabel">Création d'un produit</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body" style="max-height: 60vh;overflow-y: auto;scrollbar-width: none;">
           <form>
             <div class="mb-3">
                 <label for="name" class="form-label">Libellé :</label>
@@ -118,6 +122,14 @@
               <div class="mb-3">
                 <label for="name" class="form-label">Quantité :</label>
                 <input type="number" class="form-control" id="name" placeholder="Entrez la quantité">
+              </div>
+              <div class="mb-3">
+                <label for="role" class="form-label">Catégorie :</label>
+                <select id="role" class="form-select" required>
+                  <option selected>Sélectionnez une catégorie...</option>
+                  <option value="Tissu">Tissu</option>
+                  <option value="Montre">Montre</option>
+                </select>
               </div>
           </form>
         </div>

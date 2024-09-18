@@ -6,12 +6,14 @@
 
 <script>
 import LoginView from './views/LoginView.vue'
+ 
 
 export default {
+  
   name: 'App',
   components: {
     // eslint-disable-next-line vue/no-unused-components
-    LoginView
+    LoginView,
   }
 }
 </script>
