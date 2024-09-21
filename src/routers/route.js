@@ -20,7 +20,7 @@ const routes = [
     component: LoginView,
   },
   {
-    path: '/home',
+    path: '/home/dashboard',
     name: 'Layout',
     component: LayoutView,
     children: [

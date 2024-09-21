@@ -1,43 +1,23 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:Port/api';
+const API_URL = 'http://localhost:8080/api/auth/';
 
-// Function to get the CSRF token
-const getCsrfToken = async () => {
-  const response = await axios.get(`${API_URL}/csrf-token`);
-  return response.data.csrf_token;
-};
+class AuthService {
+  login(user) {
+    return axios.post(API_URL + 'login', {
+      email: user.email,
+      password: user.password
+    });
+  }
 
-const register = async (userData) => {
-  const csrfToken = await getCsrfToken();
-  return axios.post(`${API_URL}/register`, {
-    username: userData.username,
-    email: userData.email,
-    password: userData.password,
-    password_confirmation: userData.password_confirmation,
-    direction: userData.direction
-  }, {
-    headers: {
-      'X-CSRF-TOKEN': csrfToken
-    }
-  });
-};
+  register(user) {
+    return axios.post(API_URL + 'register', {
+      username: user.username,
+      email: user.email,
+      password: user.password,
+      direction: user.direction
+    });
+  }
+}
 
-const login = (credentials) => {
-  return axios.post(`${API_URL}/login`, credentials);
-};
-
-const logout = async () => {
-  const csrfToken = await getCsrfToken();
-  return axios.post(`${API_URL}/logout`, {}, {
-    headers: {
-      'X-CSRF-TOKEN': csrfToken
-    }
-  });
-};
-
-export default {
-  register,
-  login,
-  logout
-};
+export default new AuthService();

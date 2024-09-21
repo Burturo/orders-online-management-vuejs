@@ -272,7 +272,7 @@ export default {
   }
 
   .content-panier {
-    height: 60vh;
+    height: 56vh;
   }
 }
 

@@ -1,21 +1,7 @@
-// src/plugins/vuetify.js
-// import { createVuetify } from 'vuetify';
-// import * as components from 'vuetify/components';
-// import * as directives from 'vuetify/directives';
-
-// export default createVuetify({
-//   components,
-//   directives,
-// });
-
-import { createVuetify } from 'vuetify';
-import * as components from 'vuetify/components';
-import * as directives from 'vuetify/directives';
-import 'vuetify/styles';
+import '@mdi/font/css/materialdesignicons.css'
+import 'vuetify/styles'
+import 'public/css/login'
 
 const vuetify = createVuetify({
-  components,
-  directives,
-});
-
-export default vuetify;
+  ssr: true,
+})
