@@ -1,7 +1,8 @@
 <template>
-  <div id="app">
+  <v-app id="app">
     <router-view />
-  </div>
+    <v-btn color="red" @click="showMessage">Click me</v-btn>
+  </v-app>
 </template>
 
 <script>
@@ -14,6 +15,11 @@ export default {
   components: {
     // eslint-disable-next-line vue/no-unused-components
     LoginView,
+  },
+  methods: {
+    showMessage() {
+      alert('Vuetify is working!'); 
+    },
   }
 }
 </script>
